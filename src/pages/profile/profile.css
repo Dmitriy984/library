@@ -1,36 +1,27 @@
-/* ============================================
-   READER PROFILE PAGE
-   ============================================ */
-
 .profile-wrapper {
-  max-width: 800px;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Profile Header */
 .profile-header {
   display: flex;
-  gap: 32px;
-  padding: 32px;
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  margin-bottom: 32px;
+  gap: 2rem;
   align-items: flex-start;
+  margin-bottom: 2rem;
 }
 
 .profile-avatar {
-  flex-shrink: 0;
-  width: 100px;
-  height: 100px;
-  background: var(--bg);
-  border-radius: 50%;
+  font-size: 5rem;
+  width: 7rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.profile-avatar-emoji {
-  font-size: 48px;
+  background: #edf2f7;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .profile-info {
@@ -38,118 +29,84 @@
 }
 
 .profile-name {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 12px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
 }
 
-.profile-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-size: 14px;
-  color: var(--text-light);
-  margin-bottom: 16px;
+.profile-email,
+.profile-phone,
+.profile-registration {
+  color: #4a5568;
+  margin-bottom: 0.25rem;
 }
 
 .profile-stats {
-  display: flex;
-  gap: 24px;
-  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 8px;
 }
 
-/* Profile Sections */
-.profile-section {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 24px 32px;
-  box-shadow: var(--shadow);
-  margin-bottom: 24px;
+.stat-item {
+  text-align: center;
 }
 
-.profile-section-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 16px;
+.stat-value {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2d3748;
 }
 
-/* Active Books */
-.active-books-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.stat-label {
+  color: #718096;
+  font-size: 0.875rem;
 }
 
-.active-book-item {
-  background: var(--bg);
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+.profile-active-books,
+.profile-history {
+  margin-top: 2rem;
 }
 
-.active-book-author {
-  color: var(--text-light);
-  font-size: 13px;
+.profile-active-books h3,
+.profile-history h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
 }
 
-/* History */
-.history-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.profile-active-books ul,
+.profile-history ul {
+  list-style: none;
+  padding: 0;
 }
 
-.history-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--bg);
+.profile-active-books li,
+.profile-history li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
 }
 
-.history-item:last-child {
-  border-bottom: none;
+.history-returned {
+  color: #38a169;
+  margin-left: 0.5rem;
 }
 
-.history-book {
+.history-active {
+  color: #e53e3e;
+  margin-left: 0.5rem;
   font-weight: 500;
-  color: var(--primary);
 }
 
-.history-date {
-  font-size: 14px;
-  color: var(--text-light);
-}
-
-.profile-empty-text {
-  color: var(--text-light);
-  font-style: italic;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .profile-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .profile-details {
-    justify-content: center;
-  }
-
-  .profile-stats {
-    justify-content: center;
-  }
-
-  .history-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
   }
 }
