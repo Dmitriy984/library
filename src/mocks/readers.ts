@@ -14,7 +14,7 @@ export const mockReaders: IReader[] = [
       { bookId: '6', takenAt: new Date('2024-07-10'), returnedAt: new Date('2024-08-01') },
       { bookId: '1', takenAt: new Date('2024-08-15') }
     ],
-    activeBooks: ['1']
+    activeBooks: ['1', '2', '3']
   },
   {
     id: 'r2',
