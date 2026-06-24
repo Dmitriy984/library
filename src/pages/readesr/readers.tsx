@@ -1,6 +1,23 @@
 import Footer from "../../components/common/footer"
 import './books.css'
+import { useParams } from "react-router-dom";
+import { mockReaders } from "../../mocks/readers";
+import NotFoundPage from "../../components/common/page404";
+
 const ReadersPage = () => {
+  const { id } = useParams();
+  const reader = mockReaders.find((reader)=>{return(reader.id === id)});
+  
+
+
+  if (!reader){
+    return(
+  <NotFoundPage />
+    )
+  }
+
+
+
     return(
 <div className="page-wrapper">
     <header />

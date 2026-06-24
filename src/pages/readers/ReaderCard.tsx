@@ -1,4 +1,5 @@
 import type { IReader } from '../../../types/reader.types';
+import ReaderCard from '../../components/readers/ReaderCard/ReaderCard';
 
 interface ReaderCardProps {
   reader: IReader;
@@ -26,8 +27,8 @@ const ReaderCard = ({ reader }: ReaderCardProps) => {
           </span>
         </div>
       </div>
-      <div className="reader-card-footer">
-        <button className="btn btn-primary">Профиль</button>
+      <div>
+        <Link to={`/resders/${reader.id}`} className="btn btn-primary">Профиль</Link>
       </div>
     </div>
   );
