@@ -1,15 +1,28 @@
+import { NavLink } from "react-router-dom";
+
+
+
+
 const Header = () => {
   return (
-    <header className="header">
-      <div className="header-content">
-        <div className="logo">
-          <span className="logo-icon">📚</span>
-          <span className="logo-text">Библиотека</span>
+  <header className="header">
+      <div className="container">
+        <div className="header-content">
+          <div className="logo">
+            <span className="logo-icon">📚</span>
+            <span>Библиотека</span>
+          </div>
+          <nav className="nav">
+            <NavLink to='/' className="active">
+              📖 Книги
+              <span className="nav-badge">10</span>
+              </NavLink>
+            <NavLink to='/readers'>
+              👤 Читатели
+              <span className="nav-badge">5</span>
+              </NavLink>
+          </nav>
         </div>
-        <nav className="nav">
-          <a href="#" className="nav-link active">Книги</a>
-          <a href="#" className="nav-link">Читатели</a>
-        </nav>
       </div>
     </header>
   );

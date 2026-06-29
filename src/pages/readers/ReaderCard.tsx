@@ -35,3 +35,31 @@ const ReaderCard = ({ reader }: ReaderCardProps) => {
 };
 
 export default ReaderCard;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
