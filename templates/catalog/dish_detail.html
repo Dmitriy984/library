@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% blok title %}доставка еды{% endblok %}
+
+{% block content %}
+{% if dish%}
+<h1>Блюдо на заказ {{ dish.name|upper }}<h1>
+
+    {{dish.price}}
+    <br>
+    {{dish.created_at|date:"d.m.Y."}}
+{% else %}
+        Нет такого
+{% endif %}
+    {% endblock %}
