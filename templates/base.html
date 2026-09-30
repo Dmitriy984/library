@@ -1,13 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% blok title %}доставка еды{% endblok %}</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>{% block title %}доставка еды{% endblock %}</title>
 </head>
 <body>
-    {% blok content %}
+    {% include "includes/header.html" %}
+    {% block content %}
     <h1>Главный контент</h1>
-    {% endblok %}
+    {% endblock %}
 </body>
 </html>

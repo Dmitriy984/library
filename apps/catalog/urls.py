@@ -1,5 +1,5 @@
 from django.urls import path
-from apps.catalog.view import get_by_id, get_catalog
+from .view import get_by_id, get_catalog
 
 
 app_name = 'catalog'
